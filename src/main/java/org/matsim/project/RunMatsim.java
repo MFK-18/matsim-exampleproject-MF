@@ -90,6 +90,7 @@ public class RunMatsim{
 		plan.addLeg(leg);
 
 		Activity workActivity = populationFactory.createActivityFromLinkId("w", Id.createLinkId(1));
+		workActivity.setEndTime(17*60*60);
 		plan.addActivity(workActivity);
 
 		person2.addPlan(plan);
@@ -106,7 +107,7 @@ public class RunMatsim{
 		
 		// possibly modify controler here
 
-		controler.addOverridingModule( new OTFVisLiveModule() ) ;
+		// controler.addOverridingModule( new OTFVisLiveModule() ) ;
 		
 		// ---
 		
